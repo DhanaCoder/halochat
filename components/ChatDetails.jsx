@@ -1,6 +1,4 @@
-"use client";
-
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Loader from "./Loader";
 import { AddPhotoAlternate } from "@mui/icons-material";
 import { useSession } from "next-auth/react";
@@ -112,6 +110,13 @@ const ChatDetails = ({ chatId }) => {
     });
   }, [chat?.messages]);
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      sendText();
+    }
+  };
+
   return loading ? (
     <Loader />
   ) : (
@@ -183,6 +188,7 @@ const ChatDetails = ({ chatId }) => {
               className="input-field"
               value={text}
               onChange={(e) => setText(e.target.value)}
+              onKeyPress={handleKeyPress} // Call sendText() when Enter is pressed
               required
             />
           </div>
