@@ -74,7 +74,7 @@ const Contacts = () => {
   return loading ? (
     <Loader />
   ) : (
-    <div className="create-chat-container">
+    <div className="create-chat-container outline-dotted">
       <input
         placeholder="Search contact..."
         className="input-search"
@@ -83,10 +83,10 @@ const Contacts = () => {
       />
 
       <div className="contact-bar">
-        <div className="contact-list">
+        <div className="contact-list outline-dashed">
           <p className="text-body-bold">Select or Deselect</p>
 
-          <div className="flex flex-col flex-1 gap-5 overflow-y-scroll custom-scrollbar">
+          <div className="flex flex-col flex-1 gap-5 overflow-y-scroll custom-scrollba">
             {contacts.map((user, index) => (
               <div
                 key={index}

@@ -120,7 +120,7 @@ const ChatDetails = ({ chatId }) => {
   return loading ? (
     <Loader />
   ) : (
-    <div className="pb-20">
+    <div className="pb-20 outline-dotted">
       <div className="chat-details">
         <div className="chat-header">
           {chat?.isGroup ? (

@@ -57,10 +57,10 @@ const Profile = () => {
   return loading ? (
     <Loader />
   ) : (
-    <div className="profile-page">
+    <div className="profile-page bg-gray-500">
       <h1 className="text-heading3-bold">Edit Your Profile</h1>
 
-      <form className="edit-profile" onSubmit={handleSubmit(updateUser)}>
+      <form className="edit-profile " onSubmit={handleSubmit(updateUser)}>
         <div className="input">
           <input
             {...register("username", {
@@ -96,7 +96,7 @@ const Profile = () => {
             onUpload={uploadPhoto}
             uploadPreset="dcoo1f5d"
           >
-            <p className="text-body-bold">Upload new photo</p>
+            <p className="text-body-bold animate-bounce">Upload new photo</p>
           </CldUploadButton>
         </div>
 

@@ -53,7 +53,7 @@ const ChatList = ({ currentChatId }) => {
 
       const handleNewChat = (newChat) => {
         setChats((allChats) => [...allChats, newChat]);
-      }
+      };
 
       pusherClient.bind("update-chat", handleChatUpdate);
       pusherClient.bind("new-chat", handleNewChat);
@@ -69,10 +69,10 @@ const ChatList = ({ currentChatId }) => {
   return loading ? (
     <Loader />
   ) : (
-    <div className="chat-list">
+    <div className="chat-list bg-gray-950">
       <input
         placeholder="Search chat..."
-        className="input-search"
+        className="input-searc"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
